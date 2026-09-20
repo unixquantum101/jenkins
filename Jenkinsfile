@@ -15,7 +15,7 @@ pipeline {
                 docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
                     docker.image('unixquantum/my-jen-html:1.0.${BUILD_NUMBER}').push()
                 }
-            }unixqunatum
+            }unixquantum
         }
     }
     stages {
@@ -24,6 +24,6 @@ pipeline {
                 echo 'I want to deploy the Docker image'
                 sh 'docker run -d -p 8088:80 unixquantum/my-jen-html:1.0.${BUILD_NUMBER}'
             }
-        }unixqunatum
+        }unixquantum
     }
 }
