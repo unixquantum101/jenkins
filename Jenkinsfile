@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'I want to deploy the Docker image'
+                echo 'I want to deploy the Docker image new'
                 sh 'docker run -d -p 8088:80 unixquantum/jen-html:1.0.${BUILD_NUMBER}'
             }
         }
