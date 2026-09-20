@@ -5,7 +5,7 @@ pipeline {
             steps {
                script {
                     echo 'I want to build the Docker image'
-                    docker build -t unixquantum/jen-html:1.0.${BUILD_NUMBER} .
+                    docker build -t unixquantum/jen-html:1.0.$BUILD_NUMBER .
                 }
             }
         }
